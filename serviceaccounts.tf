@@ -7,7 +7,6 @@ resource "google_service_account" "service_accounts" {
 
 resource "google_project_iam_member" "project_roles" {
   for_each = toset(["dev", "qa", "stage", "prod"])
-
   project = var.project-id
   role    = "roles/viewer"
   member  = "serviceAccount:${google_service_account.service_accounts[each.key].email}"
