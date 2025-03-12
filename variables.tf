@@ -2,7 +2,15 @@
 variable "project-id" {
   type = string
 }
+variable "org_billing" {
+  type        = bool
+  description = "Enable billing role assignment"
+}
 
+variable "xpn" {
+  type        = bool
+  description = "Enable XPN admin role assignment"
+}
 variable "org_id" {
   type = string
   default = ""
