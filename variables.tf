@@ -1,7 +1,14 @@
 ### VARIABLES
+
+locals {
+  org_billing_non_sensitive = var.org_billing ? true : false
+  xpn_non_sensitive         = var.xpn ? true : false
+}
+
 variable "project-id" {
   type = string
 }
+
 variable "org_billing" {
   type        = bool
   description = "Enable billing role assignment"
