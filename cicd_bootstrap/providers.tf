@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     tfe = {
-      source = "hashicorp/tfe"
+      source  = "hashicorp/tfe"
       version = "0.38.0"
     }
     google-beta = {
@@ -11,11 +11,11 @@ terraform {
     }
     null = {
       source  = "hashicorp/null"
-      version = "~> 2.1"
+      version = "~> 3.2"  # Updated to a newer, compatible version
     }
     random = {
       source  = "hashicorp/random"
-      version = "~> 2.2"
+      version = "~> 3.6"  # Updated to a newer, compatible version
     }
   }
 }
